@@ -116,7 +116,7 @@ public class MapRedGMM {
 	/*
 	 * Load GMM parameters at startup so that each run starts with the GMM parameters of the previous iteration
 	 */
-	public static void main(String[] args) throws Exception {
+	public void startMapReduce(String inputPath, String outputPath) throws Exception {
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf, "gmm");
 		job.setJarByClass(MapRedGMM.class);
@@ -132,8 +132,8 @@ public class MapRedGMM {
 		job.setInputFormatClass(TextInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 
-		FileInputFormat.addInputPath(job, new Path(args[0]));
-		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		FileInputFormat.addInputPath(job, new Path(inputPath));
+		FileOutputFormat.setOutputPath(job, new Path(outputPath));
 
 		job.waitForCompletion(true);
 	}

@@ -11,7 +11,7 @@ package parallel.gmm;
 
 public class Config {
 	public static final int NUM_MIX = 256;
-	public static final int DIM = 60;
+	public static final int DIM = 300;
 	public static final String nameNode = "hdfs://101.1.1.107:8020";
 	public static final String GMM_FILE = nameNode + "/user/mwmak/stats/gmm.txt";
 }

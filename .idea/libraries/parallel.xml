@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="parallel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/parallel.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
